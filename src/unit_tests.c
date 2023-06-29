@@ -1470,6 +1470,7 @@ bool test_initialize_snakes_board_1() {
   // set up actual board
   game_state_t* actual = create_default_state();
   free(actual->snakes);
+  actual->snakes = NULL;
   actual->num_snakes = 0;
 
   actual = initialize_snakes(actual);
@@ -1542,6 +1543,7 @@ bool test_initialize_snakes_board_2() {
   set_board_at(actual, 4, 7, '^');
   set_board_at(actual, 3, 7, 'W');
   free(actual->snakes);
+  actual->snakes = NULL;
   actual->num_snakes = 0;
 
   actual = initialize_snakes(actual);
